@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab3.User_Controls {
+namespace Lab3 {
     
     
-    public partial class Jumbotron {
+    public partial class Students {
         
         /// <summary>
-        /// content control.
+        /// PageSizeDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl content;
+        protected global::System.Web.UI.WebControls.DropDownList PageSizeDropDownList;
+        
+        /// <summary>
+        /// StudentsGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView StudentsGridView;
     }
 }

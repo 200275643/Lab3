@@ -13,5 +13,11 @@ namespace Lab3
         {
 
         }
+
+        protected void SendButton_Click(object sender, EventArgs e)
+        {
+            // this is a placeholder for working code that sends email 
+            Response.Redirect("Default.aspx");
+        }
     }
 }
