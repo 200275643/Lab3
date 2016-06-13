@@ -11,11 +11,15 @@ using System.Web.ModelBinding;
 
 namespace Lab3
 {
+   internal class DefaultConnection
+    {
+    }
+
     public partial class StudentDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((!IsPostBack) && (Request.QueryString.Count > 0))
+            if((!IsPostBack) && (Request.QueryString.Count > 0))
             {
                 this.GetStudent();
             }
@@ -35,7 +39,7 @@ namespace Lab3
                                           select student).FirstOrDefault();
 
                 // map the student properties to the form controls
-                if (updatedStudent != null)
+                if(updatedStudent != null)
                 {
                     LastNameTextBox.Text = updatedStudent.LastName;
                     FirstNameTextBox.Text = updatedStudent.FirstMidName;
@@ -61,8 +65,8 @@ namespace Lab3
                 Student newStudent = new Student();
 
                 int StudentID = 0;
-
-                if (Request.QueryString.Count > 0)
+                
+                if(Request.QueryString.Count > 0)
                 {
                     // get the id from url
                     StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
@@ -81,11 +85,11 @@ namespace Lab3
                 // use LINQ to ADO.NET to add / insert new student into the database
 
                 // check to see if a new student is being added
-                if (StudentID == 0)
+                if(StudentID == 0)
                 {
                     db.Students.Add(newStudent);
                 }
-
+                
                 // save our changes - run an update
                 db.SaveChanges();
 
